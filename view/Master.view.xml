@@ -1,0 +1,87 @@
+<mvc:View
+	controllerName="autoconfigmasterdetail.controller.Master"
+	xmlns="sap.m"
+	xmlns:semantic="sap.f.semantic"
+    xmlns:u="sap.ui.unified"
+	xmlns:mvc="sap.ui.core.mvc">
+
+	<semantic:SemanticPage
+		id="masterPage"
+		preserveHeaderStateOnScroll="true"
+		toggleHeaderOnTitleClick="false">
+		<semantic:titleHeading>
+			<Title
+				id="masterPageTitle"
+				text="{masterView>/title}"
+				level="H2"/>
+		</semantic:titleHeading>
+		<semantic:content>
+        <VBox>
+          <HBox>
+            <VBox>
+                <Label id="microPhone" text="Record  "/>
+                <Button id="microPhoneButton" icon="sap-icon://microphone" press="onStartRecording" class="sapUiSmallMarginEnd"/>
+            </VBox>
+            <VBox>
+                <Label id="microPhonestop" text=" Stop"/>
+               <Button id="microPhoneButtonstop" icon="sap-icon://stop" press="stopRecording"/>
+          </VBox>
+        </HBox>
+        
+        <u:FileUploader visible="false" id="FileUploaderId" sameFilenameAllowed="true" iconOnly="false" fileType="XLSX,xlsx"
+									icon="sap-icon://upload" iconFirst="true" style="Emphasized" change="onUpload" placeholder="Choose a file for Upload..." typeMissmatch="handleTypeMissmatch" >
+                
+        </u:FileUploader>
+			<!-- For client side filtering add this to the items attribute: parameters: {operationMode: 'Client'}}" -->
+			<List
+				id="list"
+				width="auto"
+				class="sapFDynamicPageAlignContent"
+				items="{
+					path: 'transaction>/'
+				}"
+				busyIndicatorDelay="{masterView>/delay}"
+				noDataText="{masterView>/noDataText}"
+				mode="{= ${device>/system/phone} ? 'None' : 'SingleSelectMaster'}"
+				growing="true"
+				growingScrollToLoad="true"
+				updateFinished=".onUpdateFinished"
+				selectionChange=".onSelectionChange">
+				<headerToolbar>
+					<OverflowToolbar>
+						<!--<SearchField
+							id="searchField"
+							showRefreshButton="true"
+							tooltip="{i18n>masterSearchTooltip}"
+							search=".onSearch"
+							width="auto">
+							<layoutData>
+								<OverflowToolbarLayoutData
+									minWidth="150px"
+									maxWidth="240px"
+									shrinkable="true"
+									priority="NeverOverflow"/>
+							</layoutData>
+						</SearchField>
+						<ToolbarSpacer/>
+						<Button
+							id="sortButton"
+							press=".onOpenViewSettings"
+							icon="sap-icon://sort"
+							type="Transparent"/>-->
+					</OverflowToolbar>
+				</headerToolbar>
+				<items>
+					<ObjectListItem
+						type="Navigation"
+						press=".onSelectionChange"
+						title="{transaction>title}"
+>                   <ObjectAttribute text="{transaction>description}" />
+					</ObjectListItem>
+                    
+				</items>
+			</List>
+            </VBox>
+		</semantic:content>
+	</semantic:SemanticPage>
+</mvc:View>

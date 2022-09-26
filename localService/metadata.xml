@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="Z_GW_AUTO_CONFIG_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Costcenterlist" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Costcenter"/>
+                </Key>
+                <Property Name="Costcenter" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Cost Center" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ValidFrom" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Valid From" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ValidTo" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Valid To" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PersonInCharge" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Person Resp." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Department" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Department" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CostcenterType" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="CCtr Category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CostctrHierGrp" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Std. Hierarchy" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CompCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Company Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BusArea" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Business Area" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+                <Property Name="CurrencyIso" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="ISO code crcy" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProfitCtr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Profit Center" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RecordQuantity" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Record Quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LockIndActualPrimaryCosts" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Lock Act.PCosts" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LockIndPlanPrimaryCosts" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Plan pri. costs" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LockIndActSecondaryCosts" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Actl Sec. Costs" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LockIndPlanSecondaryCosts" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Plan Secondary" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LockIndActualRevenues" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Lock Act. Rev." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LockIndPlanRevenues" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Plan Revenues" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LockIndCommitmentUpdate" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Commitment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ConditionTableUsage" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Usage" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Application" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Application" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CstgSheet" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Costing Sheet" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActyIndepTemplate" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Activity-Indep.Temp." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActyDepTemplate" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Activity-Dep.Tmp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrTitle" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Title" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrName1" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrName2" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Name 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrName3" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Name 3" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrName4" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Name 4" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrStreet" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Street" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrCity" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="City" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrDistrict" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="District" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrCountry" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Country" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrCountryIso" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Country ISO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrTaxjurcode" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Tax Jur." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrPoBox" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="PO Box" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrPostlCode" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Postal Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrPobxPcd" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="PO Box PCode" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrRegion" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Region" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoLangu" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoLanguIso" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoTelephone" Type="Edm.String" Nullable="false" MaxLength="16" sap:unicode="false" sap:label="Telephone 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoTelephone2" Type="Edm.String" Nullable="false" MaxLength="16" sap:unicode="false" sap:label="Telephone 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoTelebox" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Telebox" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoTelex" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Telex" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoFaxNumber" Type="Edm.String" Nullable="false" MaxLength="31" sap:unicode="false" sap:label="Fax Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoTeletex" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Teletex" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoPrinter" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Printer Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoDataLine" Type="Edm.String" Nullable="false" MaxLength="14" sap:unicode="false" sap:label="Data line" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JvVenture" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Joint venture" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JvRecInd" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Recovery Indic." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JvEquityTyp" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Equity type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JvOtype" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="JV Object Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JvJibcl" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="JIB/JIBE Class" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JvJibsa" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="JIB/JIBE SbClsA" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Descript" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FuncArea" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Functional Area" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActyDepTemplateAllocCc" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Acty-Dep Templ.Alloc" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActyIndepTemplateAllocCc" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Acty-IndepTemplAlloc" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FuncAreaLong" Type="Edm.String" Nullable="false" MaxLength="16" sap:unicode="false" sap:label="Functional Area" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PersonInChargeUser" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User Responsible" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Logsystem" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Logical System" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActyDepTemplateSk" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Templ.: Stat. KF" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActyIndepTemplateSk" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Templ.: Stat. KF" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BudgetCarryingCostCtr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Budget Cost Center" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AvcProfile" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Availy Ctrl Prfl" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AvcActive" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="AVC is Active" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fund" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Fund" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GrantId" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Grant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FundFixAssigned" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Fund Fixed Assignment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GrantFixAssigned" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Grant Fixed Assignment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FuncAreaFixAssigned" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Functional Area Fixed Assignment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ControllingArea" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CoArea"/>
+                </Key>
+                <Property Name="CoArea" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="CO Area" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="CostcenterlistSet" Relationship="Z_GW_AUTO_CONFIG_SRV.Cost_Center" FromRole="FromRole_Cost_Center" ToRole="ToRole_Cost_Center"/>
+            </EntityType>
+            <EntityType Name="ZBAPI_CC_CREATE" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Controllingarea"/>
+                </Key>
+                <Property Name="Controllingarea" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="CO Area" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Costcenter" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Cost Center" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ValidFrom" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Valid From" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ValidTo" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Valid To" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PersonInCharge" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Person Resp." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Department" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Department" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CostcenterType" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="CCtr Category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CostctrHierGrp" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Std. Hierarchy" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CompCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Company Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BusArea" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Business Area" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Currency" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+                <Property Name="CurrencyIso" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="ISO code crcy" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ProfitCtr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Profit Center" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RecordQuantity" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Record Quantity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LockIndActualPrimaryCosts" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Lock Act.PCosts" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LockIndPlanPrimaryCosts" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Plan pri. costs" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LockIndActSecondaryCosts" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Actl Sec. Costs" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LockIndPlanSecondaryCosts" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Plan Secondary" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LockIndActualRevenues" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Lock Act. Rev." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LockIndPlanRevenues" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Plan Revenues" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LockIndCommitmentUpdate" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Commitment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ConditionTableUsage" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Usage" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Application" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Application" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CstgSheet" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Costing Sheet" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActyIndepTemplate" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Activity-Indep.Temp." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActyDepTemplate" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Activity-Dep.Tmp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrTitle" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Title" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrName1" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrName2" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Name 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrName3" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Name 3" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrName4" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Name 4" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrStreet" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Street" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrCity" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="City" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrDistrict" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="District" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrCountry" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Country" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrCountryIso" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Country ISO" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrTaxjurcode" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Tax Jur." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrPoBox" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="PO Box" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrPostlCode" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Postal Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrPobxPcd" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="PO Box PCode" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AddrRegion" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Region" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoLangu" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoLanguIso" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Language Code" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoTelephone" Type="Edm.String" Nullable="false" MaxLength="16" sap:unicode="false" sap:label="Telephone 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoTelephone2" Type="Edm.String" Nullable="false" MaxLength="16" sap:unicode="false" sap:label="Telephone 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoTelebox" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Telebox" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoTelex" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Telex" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoFaxNumber" Type="Edm.String" Nullable="false" MaxLength="31" sap:unicode="false" sap:label="Fax Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoTeletex" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Teletex" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoPrinter" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Printer Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelcoDataLine" Type="Edm.String" Nullable="false" MaxLength="14" sap:unicode="false" sap:label="Data line" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JvVenture" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Joint venture" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JvRecInd" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Recovery Indic." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JvEquityTyp" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Equity type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JvOtype" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="JV Object Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JvJibcl" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="JIB/JIBE Class" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="JvJibsa" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="JIB/JIBE SbClsA" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Descript" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FuncArea" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Functional Area" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActyDepTemplateAllocCc" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Acty-Dep Templ.Alloc" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActyIndepTemplateAllocCc" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Acty-IndepTemplAlloc" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FuncAreaLong" Type="Edm.String" Nullable="false" MaxLength="16" sap:unicode="false" sap:label="Functional Area" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PersonInChargeUser" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User Responsible" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Logsystem" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Logical System" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActyDepTemplateSk" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Templ.: Stat. KF" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ActyIndepTemplateSk" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Templ.: Stat. KF" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BudgetCarryingCostCtr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Budget Cost Center" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AvcProfile" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Availy Ctrl Prfl" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AvcActive" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="AVC is Active" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Fund" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Fund" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GrantId" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Grant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FundFixAssigned" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Fund Fixed Assignment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GrantFixAssigned" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Grant Fixed Assignment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FuncAreaFixAssigned" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Functional Area Fixed Assignment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Message type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Message Class" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Number" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Message Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Message" Type="Edm.String" Nullable="false" MaxLength="220" sap:unicode="false" sap:label="Message Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LogNo" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Log number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LogMsgNo" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Message no." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MessageV1" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MessageV2" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MessageV3" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MessageV4" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Message Variable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Parameter" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Parameter Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Row" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Parameter line" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Field" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Field name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="System" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Logical system" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <Association Name="Cost_Center" sap:content-version="1">
+                <End Type="Z_GW_AUTO_CONFIG_SRV.ControllingArea" Multiplicity="0..1" Role="FromRole_Cost_Center"/>
+                <End Type="Z_GW_AUTO_CONFIG_SRV.Costcenterlist" Multiplicity="*" Role="ToRole_Cost_Center"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Cost_Center">
+                        <PropertyRef Name="CoArea"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Cost_Center">
+                        <PropertyRef Name="CompCode"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="Z_GW_AUTO_CONFIG_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="CostcenterlistSet" EntityType="Z_GW_AUTO_CONFIG_SRV.Costcenterlist" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="ControllingAreaSet" EntityType="Z_GW_AUTO_CONFIG_SRV.ControllingArea" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ZBAPI_CC_CREATESet" EntityType="Z_GW_AUTO_CONFIG_SRV.ZBAPI_CC_CREATE" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="Cost_CenterSet" Association="Z_GW_AUTO_CONFIG_SRV.Cost_Center" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ControllingAreaSet" Role="FromRole_Cost_Center"/>
+                    <End EntitySet="CostcenterlistSet" Role="ToRole_Cost_Center"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="http://zin-blr-srv4:8000/sap/opu/odata/sap/Z_GW_AUTO_CONFIG_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://zin-blr-srv4:8000/sap/opu/odata/sap/Z_GW_AUTO_CONFIG_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
